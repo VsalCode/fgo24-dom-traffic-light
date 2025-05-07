@@ -21,8 +21,11 @@
         red.classList.add('red')
         setInterval(() => {
         yellow.classList.add('yellow')
+        red.remove('red')
         setInterval(() => {
           green.classList.add('green')
+          red.remove('red')
+          yellow.remove('red')
           }, 3000)
         }, 2000)
     })
