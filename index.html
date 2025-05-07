@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Lights</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div>
+    <div class="kotak"><div class="lampu"></div></div>
+    <div class="kotak"><div class="lampu"></div></div>
+    <div class="kotak"><div class="lampu"></div>
+  </div>
+  <script>
+    const red = document.querySelector('.kotak:nth-child(1) > div')
+    const yellow = document.querySelector('.kotak:nth-child(2) > div')
+    const green = document.querySelector('.kotak:nth-child(3) > div')
+
+    setInterval(() => {
+        red.classList.add('red')
+        setInterval(() => {
+        yellow.classList.add('yellow')
+        setInterval(() => {
+          green.classList.add('green')
+          }, 3000)
+        }, 2000)
+    })
+    
+  </script>
+</body>
+</html>
